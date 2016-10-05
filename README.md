@@ -24,10 +24,11 @@ Thats it!
 **Routes**
 
 ```
---------------------------------------------------------------------
-POST      => /login
+-------------------------------------------------------------------------------------
+POST      => /login   Required Params:email,password
 POST      => /refresh-token
---------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+Required Params : access_token
 
 GET       => /admin/users             AdminUserController@index
 POST      => /admin/users             AdminUserController@store
@@ -35,9 +36,9 @@ GET       => /admin/users/{user_id}   AdminUserController@show
 PATCH     => /admin/users/{user_id}   AdminUserController@update
 DELETE    => /admin/users/{user_id}   AdminUserController@destroy
 
---------------------------------------------------------------------
-GET       => /users                   UserController@index
---------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+GET       => /users   Required params: access_token   |  UserController@index
+-------------------------------------------------------------------------------------
 ```
 
 **Users Table Schema**
