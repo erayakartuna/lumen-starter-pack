@@ -28,7 +28,7 @@ $app->group(['namespace' => 'App\Http\Controllers'], function($group) use($app) 
     });
 
     $group->post('login', function () use ($app) {
-        $username = app()->make('request')->input("username");
+        $username = app()->make('request')->input("email");
         $password = app()->make('request')->input("password");
         return $app->make('App\Auth\Proxy')->attemptLogin(["username" => $username, "password" => $password]);
     });
