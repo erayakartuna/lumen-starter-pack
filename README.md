@@ -1,7 +1,7 @@
 # Lumen Starter Pack
 Lumen + Oauth2 resource owner password credentials grant + Users Module
 
-You can derive an oauth2 rest api with this package.I wrote a users module with permission control.You are able to create,update,delete,list users.
+You can derive an oauth2 rest api from this package.I wrote a users module with permission control.You are able to create,update,delete,list users.
 
 
 ##Installation
