@@ -54,6 +54,13 @@ Schema::create('users', function(Blueprint $table)
 			$table->timestamps();
 		});
 ```
+
+**User Login Informations**
+```
+user@user.com
+user1234
+```
+
 #### Resources
 
 [LUMEN](https://lumen.laravel.com/)
