@@ -1,8 +1,9 @@
 # Lumen Starter Pack
-Lumen + Oauth2 resource owner password credentials grant + Users Module
+This package can implement a OAuth 2 based REST API server.
 
-You can derive an oauth2 rest api from this package.I wrote a users module with permission control.You are able to create,update,delete,list users.
+It implements a module on top of Lumen Laravel micro-framework to provide a REST API based on OAuth2 authorization.
 
+The package also provides a users module with permission control that can create, update, delete and list users.
 
 ##Installation
 
