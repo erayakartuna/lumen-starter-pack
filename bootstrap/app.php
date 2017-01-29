@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 Dotenv::load(__DIR__.'/../');
 
@@ -22,9 +22,13 @@ $app = new Laravel\Lumen\Application(
 $app->configure('app');
 $app->configure('secrets');
 
-class_alias('Illuminate\Support\Facades\Config', 'Config');
-class_alias('Maatwebsite\Excel\Facades\Excel', 'Excel');
-class_alias('Illuminate\Support\Facades\Response', 'Response');
+if (!class_exists('Config')) {
+    class_alias('Illuminate\Support\Facades\Config', 'Config');
+}
+
+if (!class_exists('Response')) {
+    class_alias('Illuminate\Support\Facades\Response', 'Response');
+}
 
 
 $app->withFacades();
@@ -88,7 +92,7 @@ $app->routeMiddleware([
 
 $app->register('LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider');
 $app->register('Optimus\OAuth2Server\OAuth2ServerServiceProvider');
-$app->register('Maatwebsite\Excel\ExcelServiceProvider');
+
 
 /*
 |--------------------------------------------------------------------------
