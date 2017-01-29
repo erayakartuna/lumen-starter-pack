@@ -41,7 +41,7 @@ DELETE    => /admin/users/{user_id}   AdminUserController@destroy
 GET       => /users   Required params: access_token   |  UserController@index
 -------------------------------------------------------------------------------------
 ```
-*** to understand more look inside to Unit Tets ***
+***Look inside to Unit tests to understand more***
 
 **Users Table Schema**
 ```
